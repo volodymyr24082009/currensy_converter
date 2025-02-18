@@ -1,0 +1,108 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  gap: 20px;
+  overflow: hidden; /* Зберігає вміст в межах блоку */
+}
+
+.converter, .exchange-rates {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  width: 48%;
+  overflow-y: auto;
+  max-height: 70vh;
+  margin-top: 10px; /* Додаємо відступ між блоками */
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 15px; /* Збільшуємо відступ після заголовка */
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  font-size: 1em;
+  margin-top: 15px; /* Збільшено відступ зверху */
+}
+
+input, select {
+  width: 100%;
+  padding: 12px; /* Збільшено внутрішні відступи */
+  margin-top: 8px; /* Збільшено відступ між полем вводу і лейблом */
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: black; /* Текст в полях буде чорним */
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.7); /* Текст підказки чорний */
+}
+
+input:focus, select:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+button {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s;
+  margin-top: 15px; /* Відступ між кнопкою і результатом */
+}
+
+button:hover {
+  background: linear-gradient(90deg, #e52e71, #ff8a00);
+  transform: scale(1.05);
+}
+
+#result {
+  margin-top: 15px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+#rates-list {
+  list-style-type: none;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 300px;
+  margin-top: 15px; /* Відступ від попереднього блоку */
+}
+
+#rates-list li {
+  font-size: 1.1em;
+  margin-bottom: 12px; /* Збільшено відступ між елементами списку */
+}
